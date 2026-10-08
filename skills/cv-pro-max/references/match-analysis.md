@@ -90,3 +90,61 @@ Status: ADJACENT
 Evidence: Candidate has relevant financial-product exposure but no verified direct FinTech role.
 
 Positioning: Use the transferable product/technical experience without claiming FinTech expertise.
+
+
+## 6. Deterministic Scoring Procedure
+
+Create one row per scored dimension.
+
+| Dimension | Weight | Score | Evidence |
+|---|---:|---:|---|
+| Must-have technical | 30 | 0–1 | Requirement rows |
+| Relevant experience/domain | 25 | 0–1 | Experience evidence |
+| Responsibilities/ownership | 20 | 0–1 | Ownership evidence |
+| Seniority/leadership | 10 | 0–1 | Scope evidence |
+| Preferred requirements | 10 | 0–1 | Requirement rows |
+| Education/certification | 5 | 0–1 | Verified records |
+
+Calculate:
+
+Weighted Match = Σ(dimension score × weight).
+
+Unknown handling:
+- UNKNOWN is not silently converted to zero when evidence is genuinely unavailable.
+- Report the score as provisional when one or more high-weight dimensions contain material UNKNOWN evidence.
+- If a numeric decision aid is requested despite unknowns, calculate an observed-evidence score and separately report unknown coverage.
+
+Status-to-score defaults:
+- MATCH = 1.0
+- ADJACENT = 0.7
+- WEAK = 0.3
+- GAP = 0.0
+- UNKNOWN = N/A
+
+Requirement weighting:
+- Explicit must-have: highest priority.
+- Repeated technical requirement: next.
+- Core responsibility: next.
+- Preferred: lower.
+- Generic soft skill: lowest.
+
+## 7. Coverage Metrics
+
+Report:
+- Must-have coverage = direct MATCH must-haves / total must-haves.
+- Evidence coverage = requirements with MATCH or ADJACENT evidence / scored requirements.
+- Unknown rate = UNKNOWN requirements / total requirements.
+- High-risk gaps = must-haves classified GAP.
+- High-risk unknowns = must-haves classified UNKNOWN.
+
+Do not present these metrics as hiring probability.
+
+## 8. Decision Rules
+
+Recommend:
+- Strong fit: no high-risk must-have gaps and most must-haves are MATCH.
+- Plausible fit: core role is credible but has material ADJACENT or UNKNOWN requirements.
+- Stretch fit: multiple core requirements are ADJACENT/GAP but transferable evidence is credible.
+- Weak fit: one or more critical must-haves are unsupported or contradicted.
+
+The final recommendation must explain which requirements drove it.
