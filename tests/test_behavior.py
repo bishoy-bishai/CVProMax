@@ -50,3 +50,16 @@ def test_command_routes_cv_through_optimizer():
     assert "CV Optimizer Engine" in text
     assert "Keyword Mapping" in text
     assert "Bullet Rewrite Engine" in text
+
+
+def test_end_to_end_fixture_covers_truth_boundary():
+    fixture = (BASE / "examples/end-to-end-example.md").read_text()
+    for marker in [
+        "React | MATCH",
+        "React Query | UNKNOWN",
+        "Do not claim React Query.",
+        "No invented metrics.",
+        "Expected CV Change Log",
+        "Expected Validation",
+    ]:
+        assert marker in fixture
