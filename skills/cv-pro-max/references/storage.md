@@ -1,27 +1,58 @@
-# Storage
+# Storage Model
 
-Separate reusable Career Profile data from one-off Applications.
+Separate reusable candidate evidence from one-off applications.
 
-Career Profile:
+## Career Profile
+
+Contains stable or reusable information:
 - experience
 - achievements
 - projects
 - skills
 - education
 - certifications
-- preferences
+- domains
+- leadership
 - verified metrics
+- preferences
 
-Application:
+## Achievement Record
+
+Each achievement should preserve:
+- context
+- problem
+- ownership
+- action
+- technology
+- result
+- metric
+- scope
+- source
+- evidence class
+
+## Application
+
+Contains:
 - company
 - role
-- job description
 - source URL
+- JD snapshot
+- date
 - match analysis
 - questions
-- tailored CV notes
+- answers
+- tailored CV changes
 - cover letter
+- research
 - interview prep
 - status
 
-Never persist invented details as candidate evidence.
+## Status lifecycle
+
+Saved → Researching → Tailoring → Applied → Recruiter Screen → Interview → Offer → Rejected → Withdrawn
+
+## Integrity
+
+Never persist an invented detail as candidate evidence.
+
+If a value is uncertain, store the uncertainty explicitly.
