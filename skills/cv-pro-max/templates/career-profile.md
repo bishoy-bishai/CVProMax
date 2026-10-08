@@ -1,24 +1,147 @@
 # Career Profile
 
-## Target Roles
+> Reusable source of truth for the candidate. This file stores evidence, not marketing copy.
 
-## Summary
+## 1. Identity
 
-## Experience
+- Name:
+- Location:
+- Contact:
+- LinkedIn:
+- Portfolio:
+- GitHub:
+
+## 2. Target Roles
+
+### Primary
+-
+
+### Secondary
+-
+
+### Preferred Locations / Work Model
+-
+
+## 3. Professional Positioning
+
+### Current Position
+-
+
+### Seniority
+-
+
+### Core Technical Identity
+-
+
+### Domains
+-
+
+### Differentiators
+-
+
+## 4. Experience
 
 ### Company — Role
-- Dates:
+
+**Dates:**  
+**Location:**  
+**Scope:**  
+**Team / Collaboration:**  
+
+#### Responsibilities
+-
+
+#### Achievements
+-
+
+#### Evidence-backed metrics
+-
+
+#### Technologies used directly
+-
+
+#### Source
+-
+
+## 5. Achievement Bank
+
+### Achievement
+- Situation:
+- Problem:
+- Ownership:
+- Action:
+- Technology:
+- Result:
+- Metric:
 - Scope:
-- Achievements:
+- Evidence source:
+- Evidence class:
 
-## Projects
+## 6. Project Bank
 
-## Skills
+### Project
+- Problem:
+- Role:
+- Contribution:
+- Stack:
+- Outcome:
+- Link:
+- Evidence source:
 
-## Education
+## 7. Skills
 
-## Certifications
+### Frontend
+-
 
-## Preferences
+### Backend
+-
 
-## Verified Metrics
+### Architecture
+-
+
+### Testing
+-
+
+### DevOps / CI
+-
+
+### AI / Developer Productivity
+-
+
+### Other
+-
+
+## 8. Education
+
+-
+
+## 9. Certifications
+
+-
+
+## 10. Leadership and Collaboration
+
+-
+
+## 11. Verified Metrics
+
+| Metric | Value | Context | Source |
+|---|---|---|---|
+
+## 12. Preferences
+
+- Target compensation:
+- Preferred geography:
+- Work model:
+- Company size:
+- Industry preferences:
+
+## 13. Evidence Gaps
+
+| Missing fact | Why it matters | Question |
+|---|---|---|
+
+## 14. Last Verified
+
+- Date:
+- Source/version:
