@@ -175,10 +175,6 @@ See [skills/cv-pro-max/SKILL.md](skills/cv-pro-max/SKILL.md) for the complete op
 - `tests/` — behavior checks
 - `validation/` — repository validation
 
-## Installation
-
-The repository is designed to follow the same distribution model as CodeProMax. Claude Code, Cursor, Codex CLI, and other Agent Skills-compatible clients can consume the skill files from `skills/cv-pro-max/`.
-
 ## Philosophy
 
 A CV is not the product.
