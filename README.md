@@ -73,7 +73,26 @@ CVProMax changes:
 
 It does not add skills simply because they appear in the JD.
 
-### 6. Write the Cover Letter
+#
+## CV Optimizer Engine
+
+The CV mode uses a controlled optimization pipeline:
+
+**JD Requirements → Evidence Mapping → Relevance Decisions → Keyword Mapping → Bullet Rewriting → Tailored CV → Truth/ATS Validation → Change Log**
+
+Every material rewrite can be traced back to candidate evidence and the job requirement it is meant to address.
+
+The optimizer explicitly distinguishes:
+
+- **PROMOTE** — strong, relevant evidence
+- **KEEP** — useful supporting evidence
+- **COMPRESS** — true but lower-value detail
+- **OMIT** — unnecessary for the target role
+- **ASK** — valuable evidence that is still unknown
+
+It also distinguishes **EXACT**, **SYNONYM**, **RELATED**, and **UNSUPPORTED** JD terminology, so ATS optimization never becomes keyword invention.
+
+## 6. Write the Cover Letter
 
 The letter connects:
 
