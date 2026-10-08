@@ -1,10 +1,19 @@
 ---
-description: ATS-first, evidence-based job application workflow
+description: CVProMax evidence-first career application workflow
 alwaysApply: false
 ---
 
-Use CVProMax principles:
-- Never fabricate evidence.
-- Ask high-value questions.
-- Optimize for ATS without keyword stuffing.
-- Preserve uncertainty.
+# CVProMax
+
+When the user asks to tailor a CV, compare a CV to a job, write a cover letter, research an employer, prepare for an interview, or improve an application:
+
+1. Load the candidate evidence.
+2. Parse the job requirements.
+3. Run the Question Engine for material unknowns.
+4. Classify requirements as MATCH, ADJACENT, GAP, or UNKNOWN.
+5. Tailor only from verified candidate evidence.
+6. Apply ATS checks.
+7. Apply a humanization pass.
+8. Never invent metrics, technologies, responsibilities, titles, dates, company facts, salary, or interview claims.
+
+When information is missing, ask a focused question or label it UNKNOWN.
