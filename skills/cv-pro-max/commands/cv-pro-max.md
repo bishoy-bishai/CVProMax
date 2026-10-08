@@ -26,10 +26,14 @@ Run:
 2. Evidence Graph
 3. Match Analysis
 4. Application Strategy
-5. CV Optimization
-6. ATS
-7. Humanization
-8. Validation
+5. CV Optimizer Engine
+6. Keyword Mapping
+7. Bullet Rewrite Engine
+8. CV Optimization
+9. ATS Validation
+10. Humanization
+11. Truth / Relevance / Consistency Validation
+12. Change Log
 
 ### /cv-pro-max cover-letter
 Run:
