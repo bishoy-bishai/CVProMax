@@ -190,3 +190,106 @@ The CV, cover letter, interview stories, and application decisions are different
 ## License
 
 MIT
+
+
+## Installation
+
+CVProMax is a markdown-based Agent Skill. It has no runtime, server, or package dependency.
+
+### Agent Skills CLI
+
+```bash
+npx skills add bishoy-bishai/CVProMax --skill cv-pro-max
+```
+
+### Claude Code plugin
+
+CVProMax ships as a Claude Code plugin:
+
+```bash
+claude plugin marketplace add bishoy-bishai/CVProMax
+claude plugin install cv-pro-max@cv-pro-max-marketplace
+```
+
+Validate a local checkout:
+
+```bash
+git clone https://github.com/bishoy-bishai/CVProMax.git
+cd CVProMax
+claude plugin validate . --strict
+```
+
+### Manual installation
+
+Clone the repo:
+
+```bash
+git clone https://github.com/bishoy-bishai/CVProMax.git ~/tools/CVProMax
+CPVM=~/tools/CVProMax
+```
+
+Claude Code, project-scoped:
+
+```bash
+mkdir -p .claude/skills .claude/commands
+cp -r "$CPVM/skills/cv-pro-max" .claude/skills/cv-pro-max
+cp "$CPVM/skills/cv-pro-max/commands/cv-pro-max.md" .claude/commands/
+```
+
+Cursor:
+
+```bash
+mkdir -p .cursor/rules/cv-pro-max .cursor/commands
+cp "$CPVM/skills/cv-pro-max/cursor-rule/cv-pro-max.mdc" .cursor/rules/
+cp -r "$CPVM/skills/cv-pro-max/SKILL.md" "$CPVM/skills/cv-pro-max/references" "$CPVM/skills/cv-pro-max/templates" .cursor/rules/cv-pro-max/
+cp "$CPVM/skills/cv-pro-max/cursor-rule/commands/cv-pro-max.md" .cursor/commands/
+```
+
+Codex CLI:
+
+```bash
+mkdir -p ~/.codex/prompts
+cp "$CPVM/skills/cv-pro-max/codex-prompt/cv-pro-max.md" ~/.codex/prompts/
+```
+
+Other Agent-Skills-compatible clients: copy `skills/cv-pro-max/SKILL.md`, `references/`, and `templates/` into the client's skill/instruction directory. Copy the command file too if the client supports slash commands.
+
+## Usage
+
+After installation, use the explicit commands where supported, or describe the task in natural language.
+
+| Command | Purpose |
+|---|---|
+| `/cv-pro-max profile` | Build or update the reusable Career Profile |
+| `/cv-pro-max apply` | Run the full application workflow |
+| `/cv-pro-max cv` | Match and tailor a CV for one job |
+| `/cv-pro-max cover-letter` | Write an evidence-backed cover letter |
+| `/cv-pro-max research` | Research a company and role |
+| `/cv-pro-max interview` | Prepare role-specific interview questions and stories |
+| `/cv-pro-max audit` | Audit truth, ATS, relevance, and consistency |
+
+### Example prompts
+
+```text
+Build my Career Profile from this CV. Ask only questions that materially improve the evidence.
+
+Tailor my CV for this job. Compare every important requirement against my evidence. Do not invent anything. Show what changed and what remains unknown.
+
+Research this company before I apply. Separate verified facts, salary evidence, employee sentiment, reported interview information, and unknowns.
+
+Write a cover letter using only evidence already established in my Career Profile.
+
+Prepare me for the interview and map every story back to evidence in my Career Profile.
+```
+
+### Recommended workflow
+
+1. `/cv-pro-max profile` — build the source-of-truth Career Profile.
+2. `/cv-pro-max cv` — paste or attach a target Job Description and tailor the CV.
+3. `/cv-pro-max cover-letter` — generate the evidence-backed letter.
+4. `/cv-pro-max interview` — prepare questions and STAR stories.
+5. `/cv-pro-max audit` — run the final consistency and truth check.
+
+The CV pipeline is:
+
+Job Description → Evidence Mapping → Match → Positioning → Keyword Mapping → Bullet Rewriting → Tailored CV → Validation → Change Log
