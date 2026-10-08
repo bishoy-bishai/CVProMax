@@ -1,62 +1,68 @@
 # /cv-pro-max
 
-Use this command for career-application work.
+CVProMax turns candidate evidence into a truthful, role-specific application.
 
-## Command routing
+## Routing
 
-### Profile
+### /cv-pro-max profile
 Build or update the reusable Career Profile.
 
-Example:
-"Build my CVProMax career profile from this CV."
+Load:
+- storage.md
+- truth-and-evidence.md
+- evidence-graph.md
+- question-engine.md
 
-### Apply
-Run the complete workflow:
+### /cv-pro-max apply
+Run:
 
-Discover → Question → Research → Match → Tailor → Validate → Package
+Profile → Job Parser → Evidence Graph → Match → Questions → Strategy → Artifacts → Validation
 
-Example:
-"Apply with CVProMax to this job: [JD]"
+Artifacts may include CV, cover letter, research, and interview prep.
 
-### CV
-Tailor the CV for one role.
+### /cv-pro-max cv
+Run:
+1. Job Parser
+2. Evidence Graph
+3. Match Analysis
+4. Application Strategy
+5. CV Optimization
+6. ATS
+7. Humanization
+8. Validation
 
-Required:
-- candidate evidence
-- target JD
+### /cv-pro-max cover-letter
+Run:
+1. Job Parser
+2. Match Analysis
+3. Evidence Graph
+4. Cover Letter
+5. Humanization
+6. Truth validation
 
-Output:
-- verdict
-- match analysis
-- tailored CV
-- changes
-- truth/ATS validation
-- remaining gaps
+### /cv-pro-max research
+Run:
+1. Job/Company Research
+2. Truth and Evidence classification
+3. Candidate implications
+4. Unknowns
 
-### Cover Letter
-Create a role-specific cover letter grounded in candidate evidence.
+### /cv-pro-max interview
+Run:
+1. Job Parser
+2. Match Analysis
+3. Interview Engine
+4. Question Engine for missing stories
+5. Evidence validation
 
-### Research
-Research the company and role. Preserve source provenance and distinguish verified facts from employee reports and unknowns.
+### /cv-pro-max audit
+Run all applicable validation gates against an existing application.
 
-### Interview
-Generate technical, experience, behavioral, and gap questions plus evidence-backed STAR preparation.
+## Hard rules
 
-### Audit
-Review an existing application for:
-- factual accuracy
-- unsupported claims
-- ATS alignment
-- relevance
-- consistency
-- human readability
-
-## Execution rules
-
-1. Inspect the candidate source before writing.
-2. Parse the target job before tailoring.
-3. Run the Question Engine when material information is missing.
-4. Never fabricate missing evidence.
-5. Prefer the smallest useful question set.
-6. Keep research claims source-backed.
-7. Validate every final artifact.
+- Never fabricate.
+- Never hide a material gap.
+- Never treat a score as hiring probability.
+- Never claim an external fact without an appropriate source.
+- Never generate a candidate achievement without evidence.
+- Ask targeted questions when they can materially improve the result.
