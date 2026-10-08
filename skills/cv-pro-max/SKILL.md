@@ -472,3 +472,58 @@ For a full tailoring request, return:
 
 Never expose internal evidence IDs inside the submitted CV. They belong in the audit/change-log layer.
 
+
+## 23. Cross-Artifact Evidence Contract
+
+CVProMax treats the CV, cover letter, and interview preparation as different views of the same Evidence Graph.
+
+Never create a stronger claim in one artifact than the evidence supports in another.
+
+### Shared claim rules
+
+For every material claim:
+- identify the supporting evidence;
+- identify the requirement it addresses;
+- preserve the same ownership, scope, technology, metric, and outcome;
+- classify unresolved facts as UNKNOWN;
+- route material UNKNOWN facts to the Question Engine.
+
+### Cross-artifact consistency
+
+Before final delivery compare:
+- employer;
+- title;
+- dates;
+- technology;
+- ownership;
+- scope;
+- metrics;
+- outcomes.
+
+If any artifact introduces a new factual claim, either add verified evidence to the Career Profile or remove the claim.
+
+### Reusable evidence
+
+When one evidence record supports multiple requirements or artifacts, reuse the same source record. Do not rewrite the underlying fact differently in each artifact.
+
+This prevents:
+- metric drift;
+- inflated ownership;
+- contradictory technologies;
+- inconsistent seniority;
+- invented interview stories.
+
+### Artifact order
+
+For a full application:
+
+1. Build / refresh Career Profile.
+2. Parse Job.
+3. Build Evidence Graph.
+4. Match requirements.
+5. Resolve high-value questions.
+6. Define Application Strategy.
+7. Generate Tailored CV.
+8. Generate Cover Letter from the same graph.
+9. Generate Interview Stories from the same graph.
+10. Run cross-artifact consistency validation.
