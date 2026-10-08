@@ -1,9 +1,27 @@
 {
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "cv-pro-max",
-  "version": "0.1.0",
-  "description": "ATS-first, evidence-based CV tailoring and job application skill.",
-  "author": {"name": "Bishoy Bishai"},
-  "repository": "https://github.com/bishoy-bishai/CVProMax",
+  "description": "Turn real career evidence and a target job into truthful, ATS-safe CVs, cover letters, research, match analysis, and interview preparation.",
+  "version": "0.2.0",
+  "author": {
+    "name": "Bishoy Bishai",
+    "url": "https://github.com/bishoy-bishai"
+  },
   "homepage": "https://github.com/bishoy-bishai/CVProMax",
-  "commands": ["./skills/cv-pro-max/commands/cv-pro-max.md"]
+  "repository": "https://github.com/bishoy-bishai/CVProMax",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "ai-agent",
+    "claude-code",
+    "cv",
+    "resume",
+    "ats",
+    "cover-letter",
+    "job-search",
+    "career"
+  ],
+  "commands": [
+    "./skills/cv-pro-max/commands/cv-pro-max.md"
+  ]
 }
