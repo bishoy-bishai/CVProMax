@@ -424,3 +424,51 @@ For a role-specific application, the agent should be able to explain:
 - whether the final artifacts remain consistent with the source evidence.
 
 If any of these cannot be established, say so explicitly.
+
+## 22. CV Optimizer Execution Contract
+
+When the user asks to tailor, optimize, rewrite, compare, or ATS-optimize a CV for a specific role, load these references together:
+
+- job-parser.md
+- match-analysis.md
+- evidence-graph.md
+- application-strategy.md
+- cv-optimizer-engine.md
+- keyword-mapping.md
+- bullet-rewrite-engine.md
+- cv-optimization.md
+- ats.md
+- ats-validation.md
+- humanizer.md
+- question-engine.md
+
+Execute the optimizer in this exact order:
+
+1. Normalize the Job Description.
+2. Extract candidate evidence.
+3. Build requirement-to-evidence mappings.
+4. Classify MATCH / ADJACENT / GAP / UNKNOWN.
+5. Decide PROMOTE / KEEP / COMPRESS / OMIT / ASK for relevant evidence.
+6. Map important JD terminology to evidence.
+7. Rewrite selected bullets using the Bullet Rewrite Engine.
+8. Assemble the tailored CV.
+9. Run Truth, Match, ATS, Human, and Consistency validation.
+10. Produce the Change Log.
+11. Stop and ask questions if a material claim remains unresolved.
+
+A polished rewrite without the requirement mapping and validation is not a complete CVProMax optimization.
+
+### Required CV Optimization Deliverables
+
+For a full tailoring request, return:
+
+- Match verdict.
+- Requirement coverage.
+- Positioning decisions.
+- Tailored CV.
+- Material Change Log.
+- Unsupported / Unknown requirements.
+- Validation report.
+
+Never expose internal evidence IDs inside the submitted CV. They belong in the audit/change-log layer.
+
