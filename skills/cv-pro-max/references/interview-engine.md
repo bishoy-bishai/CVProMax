@@ -73,3 +73,52 @@ Prepare an honest answer:
 ## Interview evidence ledger
 
 Every prepared story should point to a real Career Profile record.
+
+
+## Evidence Graph Contract
+
+Interview preparation is another view of the same candidate evidence.
+
+For every prepared story, store:
+
+| Story | Requirement | Evidence IDs | Result Status | Confidence |
+|---|---|---|---|---|
+| | | | VERIFIED / UNKNOWN | |
+
+### Story Selection
+
+Prioritize stories that cover:
+1. multiple high-priority requirements;
+2. important ownership signals;
+3. strong verified outcomes;
+4. likely behavioral questions;
+5. known candidate gaps that need honest handling.
+
+Do not create a story merely because the JD asks for a skill.
+
+### Story Consistency
+
+A story must agree with the candidate's CV and cover letter on:
+- employer;
+- title;
+- dates;
+- technology;
+- ownership;
+- scope;
+- metrics;
+- outcome.
+
+If a story contains a new fact not present in the Career Profile, route it to the Question Engine before using it.
+
+### Answer Safety
+
+For every proposed answer distinguish:
+- VERIFIED FACTS;
+- RECOMMENDED STRUCTURE;
+- QUESTIONS TO VERIFY.
+
+Never write an invented result into a STAR answer.
+
+### Cross-Artifact Reuse
+
+When the same evidence supports multiple requirements, reuse the same source record rather than creating separate versions of the fact. This prevents metric drift and contradictory narratives.
