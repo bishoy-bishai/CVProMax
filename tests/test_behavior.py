@@ -63,3 +63,14 @@ def test_end_to_end_fixture_covers_truth_boundary():
         "Expected Validation",
     ]:
         assert marker in fixture
+
+
+def test_cross_artifact_contract_exists():
+    skill = SKILL.read_text()
+    cover = read("references/cover-letter.md")
+    interview = read("references/interview-engine.md")
+    for text_value in [skill, cover, interview]:
+        assert "Evidence Graph" in text_value
+    assert "metric drift" in skill
+    assert "Story Consistency" in interview
+    assert "Final Consistency Gate" in cover
