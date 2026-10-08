@@ -352,3 +352,75 @@ Career Profile + Job Description + Verified Research + User Answers
 → Validation
 
 The artifact is the output. The evidence model is the product.
+
+# 20. Engine Loading Rules
+
+Load the minimum reference set needed for the requested task.
+
+## Profile building
+Load:
+- storage.md
+- truth-and-evidence.md
+- evidence-graph.md
+- question-engine.md
+
+## Job parsing and matching
+Load:
+- job-parser.md
+- match-analysis.md
+- evidence-graph.md
+- application-strategy.md
+- question-engine.md
+
+## CV tailoring
+Load:
+- cv-optimization.md
+- ats.md
+- match-analysis.md
+- evidence-graph.md
+- humanizer.md
+
+## Cover letter
+Load:
+- cover-letter.md
+- evidence-graph.md
+- humanizer.md
+
+## Company research
+Load:
+- job-research.md
+- truth-and-evidence.md
+
+## Interview preparation
+Load:
+- interview-engine.md
+- match-analysis.md
+- evidence-graph.md
+- question-engine.md
+
+## Full application
+Load all relevant references above, but execute them in this order:
+1. Profile / evidence ingestion
+2. Job Parser
+3. Evidence Graph
+4. Match Analysis
+5. Question Engine
+6. Application Strategy
+7. CV / Cover Letter / Research / Interview outputs
+8. Validation
+
+Do not skip the evidence graph merely because the user asks for a quick draft when the draft contains material factual claims.
+
+# 21. Quality Bar
+
+A CVProMax output is incomplete if it only rewrites prose.
+
+For a role-specific application, the agent should be able to explain:
+- what the role asks for;
+- what evidence supports each important requirement;
+- what remains unknown or missing;
+- what changed in the application and why;
+- which claims were deliberately omitted;
+- whether the final artifacts remain consistent with the source evidence.
+
+If any of these cannot be established, say so explicitly.
