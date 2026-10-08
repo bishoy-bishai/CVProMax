@@ -1,0 +1,5 @@
+{
+  "name": "cv-pro-max-marketplace",
+  "owner": {"name": "Bishoy Bishai"},
+  "plugins": [{"name": "cv-pro-max", "source": "./"}]
+}
