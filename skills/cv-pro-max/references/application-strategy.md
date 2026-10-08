@@ -58,3 +58,43 @@ Compress evidence that:
 The CV, cover letter, and interview stories should tell the same evidence-backed story.
 
 Do not introduce a new achievement in the cover letter that is absent from the candidate evidence.
+
+
+## 6. Evidence-Backed Application Narrative
+
+Define one primary narrative before drafting the CV:
+
+**Target role need → strongest candidate proof → supporting proof → credible gap handling**
+
+The narrative must be reusable across CV, cover letter, and interview preparation.
+
+## 7. Positioning Decisions
+
+For each important evidence item record:
+
+| Evidence | JD importance | Evidence strength | Decision | Why |
+|---|---|---|---|---|
+| | High/Medium/Low | Strong/Medium/Weak | Promote/Keep/Compress/Omit/Ask | |
+
+## 8. Gap Strategy
+
+For each GAP:
+- do not hide it;
+- decide whether it is disqualifying, compensable, or low-impact;
+- identify transferable evidence if available;
+- route high-value UNKNOWN items to the Question Engine.
+
+For each ADJACENT requirement:
+- state what is transferable;
+- state what is not equivalent;
+- choose wording that preserves that distinction.
+
+## 9. Application Readiness
+
+A package is ready when:
+- the primary narrative is clear;
+- high-priority requirements have evidence status;
+- high-value UNKNOWN items have been asked or explicitly accepted;
+- CV claims pass truth validation;
+- CV and cover letter use consistent positioning;
+- next action is explicit.
