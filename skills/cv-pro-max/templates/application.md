@@ -30,10 +30,32 @@
 
 ## 3. Match Analysis
 
-| Requirement | Priority | Status | Candidate Evidence | Confidence | Action |
-|---|---|---|---|---|---|
+| Requirement | Priority | Status | Candidate Evidence | Confidence | Positioning | Question | Action |
+|---|---|---|---|---|---|---|---|
 
-## 4. Question Engine
+### Match Summary
+- Verdict:
+- Must-have coverage:
+- Evidence coverage:
+- Unknown rate:
+- High-risk gaps:
+- High-risk unknowns:
+- Provisional weighted score:
+
+## 4. Application Strategy
+
+### Primary Narrative
+-
+
+### Positioning Decisions
+
+| Evidence | JD Importance | Evidence Strength | Decision | Why |
+|---|---|---|---|---|
+
+### Gap Strategy
+-
+
+## 5. Question Engine
 
 ### Questions Asked
 -
@@ -44,7 +66,7 @@
 ### New Evidence
 -
 
-## 5. Tailored CV
+## 6. Tailored CV
 
 ### Changes
 -
@@ -55,17 +77,27 @@
 ### Compressed Evidence
 -
 
+### Omitted Evidence
+-
+
 ### Keywords Added
 -
 
 ### Keywords Intentionally Omitted
 -
 
-## 6. Cover Letter
+### Tailored CV
+[Insert final CV artifact from tailored-cv.md]
+
+## 7. Change Log
+
+[Insert change-log.md output.]
+
+## 8. Cover Letter
 
 -
 
-## 7. Research
+## 9. Research
 
 ### Verified Facts
 -
@@ -82,7 +114,7 @@
 ### Unknowns
 -
 
-## 8. Interview Prep
+## 10. Interview Prep
 
 ### Technical
 -
@@ -96,12 +128,12 @@
 ### Gap Questions
 -
 
-## 9. Evidence Ledger
+## 11. Evidence Ledger
 
 | Claim | Source | Class | Confidence |
 |---|---|---|---|
 
-## 10. Validation
+## 12. Validation
 
 ### Truth
 - [ ] No unsupported metrics
@@ -120,6 +152,12 @@
 - [ ] Concise
 - [ ] Credible
 
-## 11. Next Action
+### Consistency
+- [ ] Dates agree
+- [ ] Titles agree
+- [ ] Technologies agree
+- [ ] Metrics agree
+
+## 13. Next Action
 
 -
