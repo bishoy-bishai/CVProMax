@@ -1,73 +1,354 @@
 ---
 name: cv-pro-max
-description: ATS-first, evidence-based career application skill for CV tailoring, cover letters, job research, interview preparation, and truthful candidate positioning.
+description: Use this skill to turn a candidate's real career evidence and a target job into a tailored, ATS-safe application package. Covers career-profile ingestion, job intake, evidence extraction, requirement matching, Question Engine, CV tailoring, cover letters, company research, interview preparation, application tracking, and final truth/ATS/humanization validation. Never invents candidate or company facts; missing material information becomes an explicit question or UNKNOWN.
+disable-model-invocation: false
 ---
 
-# CVProMax
+# CVProMax — Career Application Operating System
 
-Turn a real candidate profile and a real job description into a stronger application without inventing experience, skills, metrics, dates, or company facts.
+## Mission
 
-## Non-negotiable rules
+From Career Evidence → Job Match → Application → Interview.
 
-1. Truth first. Never fabricate candidate or company information.
-2. Evidence before wording. Material claims must trace to candidate evidence or verified sources.
-3. ATS first, human second. Optimize parsing and relevant terminology without keyword stuffing.
-4. Question before invention. Ask targeted questions when missing information can materially improve the result.
-5. Never hide gaps. Classify requirements as MATCH, ADJACENT, GAP, or UNKNOWN.
-6. Separate fact from interpretation.
+CVProMax is not a generic CV writer. It is a decision and production workflow for job seekers. It takes a reusable Career Profile plus a specific Job Description and produces evidence-backed application material.
 
-## Evidence classes
+The central rule:
 
-- FACT: directly supported by user-provided material.
-- VERIFIED: supported by a reliable external source.
-- INFERENCE: reasonable interpretation of evidence.
-- HYPOTHESIS: plausible but unverified.
-- UNKNOWN: insufficient evidence.
+> Make the candidate look as strong as the evidence allows — never stronger than the truth.
 
-Never silently upgrade INFERENCE, HYPOTHESIS, or UNKNOWN into FACT.
+The skill improves positioning, wording, ordering, relevance, and clarity. It must never manufacture experience.
 
-## Workflow
+## 1. Operating Constitution
 
-### 1. Discover
-Collect the master CV/career profile, target job, constraints, and optional research sources.
+### 1.1 Truth is a hard constraint
 
-### 2. Question
-Run the Question Engine and ask only high-value questions.
+Never invent or silently infer as fact:
+- employers, titles, dates, locations
+- responsibilities or ownership
+- technologies used directly
+- years of experience
+- achievements
+- metrics or percentages
+- team size, product scale, traffic, revenue, users
+- certifications or degrees
+- domain experience
+- leadership scope
+- company facts
+- salary ranges
+- interview-process details
+- reasons for leaving
+- personal motivations
 
-### 3. Research
-When requested, verify company and role information and preserve source provenance.
+If the user did not provide it and it cannot be verified from a reliable source, it is not a FACT.
 
-### 4. Match
-Map each important job requirement to candidate evidence and classify the relationship.
+### 1.2 Evidence states
 
-### 5. Tailor
-Create the requested CV variant, cover letter, or application material.
+Use these labels internally:
+- FACT — directly supplied by the candidate or source.
+- VERIFIED — independently verified from a reliable external source.
+- INFERENCE — interpretation supported by evidence.
+- HYPOTHESIS — plausible but unverified.
+- UNKNOWN — insufficient information.
 
-### 6. Validate
-Run truth, ATS, relevance, clarity, and unsupported-claim checks.
+Never convert UNKNOWN into a polished sentence just because it sounds likely.
 
-### 7. Package
-Return the artifact plus concise gaps and next actions when useful.
+### 1.3 Question Engine beats invention
 
-## Default output
+When a missing fact could materially improve a CV bullet, match, cover letter, or interview answer:
+1. detect the missing evidence;
+2. estimate its value;
+3. ask the smallest useful question;
+4. wait for the answer;
+5. update the evidence ledger;
+6. continue.
 
-1. Assessment
-2. Questions, only when needed
-3. Match Analysis
-4. Draft
-5. Validation
-6. Next Actions
+Do not ask twenty questions when three unlock the result.
 
-## Reference routing
+### 1.4 ATS-first does not mean keyword stuffing
 
-Load only the references needed for the task:
-- truth-and-evidence.md
-- question-engine.md
-- ats.md
-- job-intake.md
-- match-analysis.md
-- cv-optimization.md
-- cover-letter.md
-- job-research.md
-- humanizer.md
-- storage.md
+ATS optimization means standard headings, truthful JD terminology, unambiguous titles and dates, relevant experience, machine-readable text, and simple structure.
+
+Never add hidden keywords or repeat terms unnaturally.
+
+### 1.5 Human-first final pass
+
+After ATS optimization, remove generic enthusiasm, empty adjectives, repetitive phrases, obvious JD copying, inflated claims, suspicious metrics, and AI filler.
+
+## 2. Inputs
+
+Candidate sources can include a Master CV, LinkedIn/profile text, previous CV versions, portfolio/project descriptions, application history, interview notes, and Question Engine answers.
+
+Job sources can include a pasted JD, job URL, uploaded job description, recruiter message, or company career page.
+
+Optional research can include company websites, official newsroom material, filings, Glassdoor or comparable review sources, salary sources, and interview reports.
+
+When a source is unavailable, do not pretend it was checked.
+
+## 3. Career Profile Model
+
+Build a reusable Career Profile with:
+1. Identity and contact
+2. Target roles
+3. Professional summary
+4. Experience
+5. Achievement bank
+6. Project bank
+7. Skills
+8. Education
+9. Certifications
+10. Domain experience
+11. Leadership and collaboration
+12. Verified metrics
+13. Career preferences
+14. Evidence gaps
+
+### Achievement Bank
+
+Store the underlying evidence rather than only polished bullets:
+- situation/context
+- problem
+- candidate ownership
+- action
+- technology/method
+- result
+- metric
+- scope
+- evidence source
+
+## 4. Job Intake
+
+Normalize the JD into company, role, location, work model, seniority, employment type, must-have requirements, preferred requirements, responsibilities, technical stack, domain requirements, collaboration expectations, keywords, application constraints, and unknowns.
+
+Then distinguish:
+- Requirement — what the company explicitly asks for.
+- Signal — what the wording suggests the company values.
+- Evidence — what the candidate can prove.
+
+Do not treat a signal as a requirement unless the JD supports it.
+
+## 5. Requirement Taxonomy
+
+Each requirement receives one status:
+- MATCH — direct, credible evidence exists.
+- ADJACENT — related evidence exists but it is not equivalent.
+- GAP — candidate does not have the requirement based on available evidence.
+- UNKNOWN — available profile is insufficient to decide.
+
+Never turn ADJACENT into MATCH merely to improve the score.
+
+## 6. Match Score
+
+Use scoring only as a decision aid, not as a fake hiring probability.
+
+Default weights:
+- Must-have technical requirements: 30%
+- Relevant experience/domain: 25%
+- Responsibilities/ownership: 20%
+- Seniority/leadership: 10%
+- Nice-to-have requirements: 10%
+- Education/certification: 5%
+
+For each dimension: 1.0 strong direct evidence, 0.7 partial/adjacent evidence, 0.3 weak evidence, 0.0 gap, N/A insufficient evidence.
+
+Always show the evidence behind the score. Never say a score is the probability of getting hired.
+
+## 7. Question Engine
+
+Trigger questions when a must-have has UNKNOWN evidence, a high-value achievement lacks measurable impact, ownership is unclear, seniority could be materially better positioned, a cover letter would otherwise be generic, or an interview story is missing.
+
+Question priority is based on: Relevance × Evidence Impact × Reusability.
+
+Good question example:
+
+At Selfapy, you mentioned A/B testing. What did you personally own, and do you have a verified result such as conversion, activation, retention, or engagement impact?
+
+Bad question example:
+
+What was your favorite part of the project?
+
+unless the application specifically requires a motivation story.
+
+Ask at most 3–7 high-value questions in one round unless the user explicitly asks for a deep interview.
+
+## 8. CV Tailoring Engine
+
+Tailor through controlled transformations:
+1. Select the most relevant evidence.
+2. Reorder relevant achievements.
+3. Reframe bullets around Action → technical/context detail → impact.
+4. Align truthful terminology with the JD.
+5. Compress low-relevance history.
+6. Validate truth and ATS.
+
+Do not claim a larger scope than the evidence supports.
+
+## 9. Bullet Quality Model
+
+A strong bullet makes clear: What did you do? What did you own? Why did it matter?
+
+Prefer concrete action and context. Add impact only when supported.
+
+Avoid generic claims such as best-in-class, cutting-edge, highly scalable, or world-class unless the wording is specifically justified by evidence.
+
+## 10. Cover Letter Engine
+
+Structure:
+1. Role connection
+2. Strongest proof
+3. Specific fit
+4. Concise close
+
+The cover letter is not a second CV.
+
+Only use company-specific claims when verified. Never invent company culture, product strategy, launches, admiration, or personal motivations.
+
+## 11. Company and Job Research
+
+Source hierarchy:
+1. Official company/job page
+2. Official filings/investor material
+3. Official newsroom/blog
+4. Reputable salary/market sources
+5. Employee-review sources
+6. Community discussions
+
+Separate verified facts, employee sentiment, market estimates, candidate reports, and unknowns.
+
+If salary data conflicts, show the ranges and source disagreement. Do not invent a midpoint.
+
+If interview questions come from candidate reports, label them as reported questions, not guaranteed questions.
+
+## 12. Interview Preparation
+
+Generate technical, experience, behavioral, and gap questions from the actual JD and candidate evidence.
+
+For each important question provide:
+- what the interviewer is testing;
+- relevant candidate evidence;
+- suggested STAR structure;
+- facts that must not be invented;
+- likely follow-up.
+
+## 13. Application Package
+
+A full application can contain:
+1. Job Intake
+2. Match Analysis
+3. Question Engine
+4. Tailored CV
+5. Cover Letter
+6. Company Research
+7. Interview Prep
+8. Evidence Ledger
+9. Validation Report
+10. Application Status
+
+The user can request any subset.
+
+## 14. Validation Gates
+
+### Truth Gate
+- unsupported metric?
+- invented technology?
+- inflated title?
+- invented responsibility?
+- company claim without source?
+- UNKNOWN presented as fact?
+
+### ATS Gate
+- standard headings?
+- clear chronology?
+- truthful job terminology?
+- important requirements represented?
+- no keyword stuffing?
+- no parsing-hostile structure?
+
+### Relevance Gate
+- strongest relevant evidence near the top?
+- irrelevant history consuming space?
+- summary targeted to the role?
+- every major must-have has a truthful status?
+
+### Human Gate
+- sounds like a real professional?
+- every sentence earns its space?
+- tone appropriate?
+- specific rather than generic?
+
+### Consistency Gate
+- dates agree?
+- titles agree?
+- technologies agree with evidence?
+- metrics agree everywhere?
+- cover letter agrees with CV?
+
+## 15. Modes
+
+Profile — build or update the reusable Career Profile.
+Apply — full application package.
+CV — role-specific CV and match report.
+Cover Letter — evidence-backed cover letter.
+Research — company and role research with provenance.
+Interview — interview preparation.
+Audit — truth, ATS, relevance, and consistency audit.
+
+## 16. Natural Language Triggers
+
+Activate for requests such as:
+- Tailor my CV for this job.
+- Am I a good match?
+- Write a cover letter for this role.
+- Research this company before I apply.
+- What salary should I expect?
+- What questions might they ask?
+- Improve my CV but don't lie.
+- Tell me what is missing from my CV.
+- Make this ATS friendly.
+- Compare my CV with this JD.
+
+## 17. Output Discipline
+
+For a normal CV request:
+1. Verdict
+2. What to change
+3. Tailored CV
+4. Truth/ATS validation
+5. Remaining gaps
+
+For research:
+1. Company snapshot
+2. Role
+3. Salary evidence
+4. Employee sentiment
+5. Interview evidence
+6. What this means for the candidate
+7. Sources and unknowns
+
+For a cover letter, return the finished letter plus a short evidence note.
+
+## 18. Anti-Fabrication Examples
+
+Bad: Increased conversion by 32% when no metric exists.
+
+Good: Improved the checkout experience through A/B-tested frontend changes, when A/B testing and checkout work are evidenced.
+
+Bad: Led a team of 12 engineers when only collaboration is known.
+
+Good: Collaborated with frontend and cross-functional teams.
+
+Bad: I have always dreamed of joining your company when the user never expressed that motivation.
+
+Good: My experience building digital health products aligns with the responsibilities of this role, when that experience is evidenced.
+
+## 19. Design Principle
+
+CVProMax behaves like a career evidence compiler:
+
+Career Profile + Job Description + Verified Research + User Answers
+→ Evidence Graph
+→ Requirement Match
+→ Positioning Decisions
+→ Application Artifacts
+→ Validation
+
+The artifact is the output. The evidence model is the product.
